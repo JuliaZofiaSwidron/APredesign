@@ -1,46 +1,251 @@
 <!DOCTYPE html>
 <html lang=en>
-    <head>
-        <title>Akademiker Pension: Profile</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link
-            href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-            rel="stylesheet">
-        <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
-            rel="stylesheet">
-        <link rel='stylesheet' href="styletile.css">
-        <link rel='stylesheet' href="style_profile.css">
-    </head>
-    <body>
-        <nav></nav>
-        <main>
+
+<head>
+    <title>Akademiker Pension: Profile</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link rel='stylesheet' href="styletile.css">
+    <link rel='stylesheet' href="style_profile.css">
+</head>
+
+<body>
+    <nav></nav>
+    <main>
         <section id="side_navigation">
             <h1>Hello,<br>Susanna Peters</h1>
             <ol class="sections">
-                <li class="section active"><div class="icon" id="pensions&insurance"><img></div><h1>Pensions & Insurance</h1></li>
-                <li class="section"><div class="icon" id="messages"><img></div><h1>Messages</h1></li>
-                <li class="section "><div class="icon" id="profile&plan"><img></div><h1>Profile & Plan</h1></li>
-                <li class="section"><div class="icon"><img></div><h1>Change Plan</h1></li>
+                <li class="section active pensinsu">
+                    <div class="icon" id="pensions&insurance"><img></div>
+                    <h1>Pensions & Insurance</h1>
+                </li>
+                <li class="section msg">
+                    <div class="icon" id="messages"><img></div>
+                    <h1>Messages</h1>
+                </li>
+                <li class="section profplan">
+                    <div class="icon" id="profile&plan"><img></div>
+                    <h1>Profile & Plan</h1>
+                </li>
+                <li class="section">
+                    <div class="icon"><img></div>
+                    <h1>Change Plan</h1>
+                </li>
             </ol>
-            <div class="log_out"><div class="icon"><img></div><h1>Log Out</h1></div>
+            <div class="log_out">
+                <div class="icon"><img></div>
+                <h1>Log Out</h1>
+            </div>
         </section>
         <section id="content">
-            <article id="profile">
+            <article id="profile" class="">
                 <div class="pension">
                     <h1>Pension</h1>
-                    <ol>
-                        <li>Expected payout</li>
+                    <ol class="smal_navi">
+                        <li class="active">Expected payout</li>
                         <li>Saving figure</li>
                         <li>Current deposit</li>
                         <li>Market interest</li>
                     </ol>
-                    <div></div>
+                    <div class="pension_data payout hide">
+                        <img src="img/pensions_data.png" alt="infographic with insides about pension plan" loading=lazy>
+                    </div>
+                    <div class="pension_data figure hide">
+                        <ul>
+                            <li>
+                                <p>If you retire, when you are</p><strong class="picker">68 years</strong>
+                            </li>
+                            <li>
+                                <p>In the first 10 years monthly payment</p><strong>29.840 kr.</strong>
+                            </li>
+                            <li>
+                                <p>For the rest of your life monthly payment</p><strong>28.590 kr.</strong>
+                            </li>
+                        </ul>
+                        <p class="learn_more">Go to pension overview</p>
+                    </div>
+                    <div class="pension_data deposit hide">
+                        <div class="deposit_cont">
+                            <p>Desposit until October 2020</p>
+                            <h1>28.590 kr.</h1>
+                        </div>
+                        <p class="learn_more">Go to account overview</p>
+                    </div>
+                    <div class="pension_data market">
+                        <div class="deposit_cont">
+                            <p>Return per 23 October 2020 - Expresses the return scar to date and not the final roll-up,
+                                which is published once a month</p>
+                            <strong>3,5%</strong>
+                        </div>
+                        <p class="learn_more">Read more</p>
+                    </div>
                 </div>
-                <div class="insurance"></div>
+                <div class="insurance">
+                    <h1>Insurance</h1>
+                    <ol class="smal_navi">
+                        <li class="active">For you</li>
+                        <li>For your children</li>
+                        <li>For your spouse</li>
+                        <li>For your beneficiares</li>
+                    </ol>
+                    <div class="insurance_data you hide">
+                        <ul>
+                            <li>
+                                <div class="insurance_icon"><img></div>
+                                <h1>38.383 kr.</h1>
+                                <p>If you lose your ability to work </p>
+                            </li>
+                            <li>
+                                <div class="insurance_icon"><img></div>
+                                <h1>400.000 kr.</h1>
+                                <p>One off payment in the event of permanent incapacity for work</p>
+                            </li>
+                            <li>
+                                <div class="insurance_icon"><img></div>
+                                <h1>100.000 kr.</h1>
+                                <p>One off payment for critical illness</p>
+                            </li>
+                        </ul>
+                        <div class="button">Go to insurance</div>
+                    </div>
+                    <div class="insurance_data children hide">
+                        <ul>
+                            <li>
+                                <div class="insurance_icon"><img></div>
+                                <h1>38.383 kr.</h1>
+                                <p>If you lose your ability to work </p>
+                            </li>
+                            <li>
+                                <div class="insurance_icon"><img></div>
+                                <h1>400.000 kr.</h1>
+                                <p>If you die</p>
+                            </li>
+                        </ul>
+                        <div class="button">Go to insurance</div>
+                    </div>
+                    <div class="insurance_data spouse ">
+                        <ul>
+                            <li>
+                                <div class="insurance_icon"><img></div>
+                                <h1>38.383 kr.</h1>
+                                <p>If you die</p>
+                            </li>
+                        </ul>
+                        <div class="button">Go to insurance</div>
+                    </div>
+                    <div class="insurance_data beneficiares hide">
+                        <ul>
+                            <li>
+                                <div class="insurance_icon"><img></div>
+                                <h1>38.383 kr.</h1>
+                                <p>If you die</p>
+                            </li>
+                        </ul>
+                        <div class="button">Go to insurance</div>
+                    </div>
+
+                </div>
+            </article>
+            <article id="messanger" class="hidden">
+                <div class="inbox">
+                    <div class="messages_header">
+                        <h1>Inbox(4)</h1>
+                        <div class="icon"><img></div>
+                    </div>
+                    <ol>
+                        <li>
+                            <h1>Akademiker Pension</h1>
+                            <p>Your plan can be changed so…</p>
+                            <h2>today</h2>
+                        </li>
+                        <li class="active">
+                            <h1>Akademiker Pension</h1>
+                            <p>How is your pension looking?</p>
+                            <h2>Mo 03-11</h2>
+                        </li>
+                        <li>
+                            <h1 class="read">Akademiker Pension</h1>
+                            <p>Recent changes</p>
+                            <h2>Sa 31-10</h2>
+                        </li>
+                        <li>
+                            <h1 class="read">Akademiker Pension</h1>
+                            <p>Are you saving enough?</p>
+                            <h2>Sa 31-10</h2>
+                        </li>
+                        <li>
+                            <h1 class="read">Akademiker Pension</h1>
+                            <p>Are you saving enough?</p>
+                            <h2>Sa 31-10</h2>
+                        </li>
+                        <li>
+                            <h1 class="read">Akademiker Pension</h1>
+                            <p>Let us know any big changes in…</p>
+                            <h2>Sa 31-10</h2>
+                        </li>
+                    </ol>
+                    <div class="button">New message</div>
+                </div>
+                <div class="email">
+                    <h2>Akademiker Pension</h2>
+                    <h1>How is your pension looking?</h1>
+                    <h3>Wednesday 04-11-2020</h3>
+                    <p>It’s a good idea to save up so you can get a pension equal to 65-80 percent of what you earn in
+                        your job today. A pension of that size usually means that you do not have to change your habits
+                        to make the money last. Our recommendation is based on the fact that your expenses for, among
+                        other things, the unemployment insurance fund and trade union, your labor market contribution,
+                        your own contribution to pension and ATP and perhaps expenses for transport disappear when you
+                        go from employee to pensioner.
+                        <br><br>Let us know if you want to make any changes, or go to <a>change your plan</a> in the
+                        left menu.
+                        <br><br><br>
+                        Kind regards,
+                        <br>Akademiker Pension</p>
+                    <div class="button">Reply</div>
+                </div>
+            </article>
+            <article id="profileplan" class="hidden">
+                <div class="profilesettings">
+                    <div class="profile_header">
+                        <h1>Your Profile</h1>
+                        <div class="icon"><img></div>
+                    </div>
+                    <div class="profile_photo"><img></div>
+                    <ol>
+                        <li>
+                            <div class="icon"><img></div>
+                            <p>susanna_peters@gmail.com</p>
+                        </li>
+                        <li>
+                            <div class="icon"><img></div>
+                            <p>Norrebrogade 44 2 tv, 2400 Copenhagen</p>
+                        </li>
+                        <li>
+                            <div class="icon"><img></div>
+                            <p>+4550248149</p>
+                        </li>
+                    </ol>
+                    <div class="button">Change Password</div>
+                </div>
+                <div class="plansettings">
+                    <h1>Your Plan</h1>
+                    <h2>Your current plan:</h2>
+                    <h1 class="special_header">Lifetime pension</h1>
+                    <p>With a lifelong pension , the money never runs out, as you are guaranteed an ongoing payment for the rest of your life no matter how long you live. Lifelong pension is your primary product and accounts for 2/3 of your savings. Lifelong pension will be paid to you from the day you retire until you die.</p>
+                    <p class="learn_more">Check if my plan is the best one for me </p>
+                    <p class="learn_more">Change plan</p>
+                </div>
+
             </article>
         </section>
     </main>
-    </body>
+    <script src="profile.js"></script>
+</body>
+
 </html>

@@ -23,7 +23,7 @@
   }
 
   /* Button styling*/
-  button {
+  .button {
     transition: all 3s;
     padding: 1rem 3rem;
     border-radius: 5rem;
@@ -44,11 +44,11 @@
     font-family: var(--secondary-font);
     border-radius: 1rem;
   }
-  button:hover {
+  .button:hover {
     background-color: var(--orange-color);
   }
   
-  button:active {
+  .button:active {
     background-color: var(--darkblue-color);
   }
 .secondary-button:visited{
@@ -126,7 +126,13 @@ h2 {
     color: var(--darkblue-color);
     font-weight: 100;
   }
-  
+h3{
+  font-family: var(--secondary-font);
+    font-size: .9rem;
+    margin:0;
+    color: var(--darkblue-color);
+    font-weight: 100;
+}
   p {
     font-family: var(--secondary-font);
     line-height: 1;
@@ -136,7 +142,7 @@ h2 {
   
   strong {
     font-weight: 600;
-  
+    color: var(--darkblue-color);
   }
   
   em {
@@ -244,3 +250,8 @@ img {
       flex-direction: row;
     }
   }
+
+/*classes for effects*/
+.hide{
+  display: none;
+}
