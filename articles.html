@@ -2,7 +2,7 @@
 <html lang=en>
 
 <head>
-    <title>Akademiker Pension: Profile</title>
+    <title>Akademiker Pension: Articles</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link
@@ -11,11 +11,25 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
-    <link rel='stylesheet' href="styletile.css">
-    <link rel='stylesheet' href="style_articles.css">
+    <link rel='stylesheet' href="css/styletile.css">
+    <link rel='stylesheet' href="css/style_articles.css">
 </head>
-<body>
-    <nav></nav>
+<body id="singlepage">
+    <nav>
+        <ul class="menu">
+            <li><a href="">Pension</a></li>
+            <li><a href="">Members</a></li>
+            <li><a href="">About AP</a></li>
+        </ul>
+
+        <ul class="icons">
+            <li><img src="css/img/search_icon.svg"></li>
+            <li><img src="css/img/mail_icon.svg"></li>
+            <li><img src="css/img/user_icon.svg"></li>
+        </ul>
+
+        <img id="navlogo" src="css/img/logo.svg">
+    </nav>
     <article class="main_article">
         <div class="photo"><img></div>
         <div class="main_title"><a>
@@ -26,58 +40,22 @@
     <article class="articles">
         <h1>About AP</h1>
         <section class="all_articles">
-            <div class="article">
-                <div class="title_small">
-                    <h1>Life changes</h1>
-                    <h2>Has your life changed?</h2>
+
+            <template id="articletemplate">
+                <a class="articlelink">
+                <div class="articlediv">
+                    <div class="title_small">
+                        <h1>Life changes</h1>
+                        <h2>Has your life changed?</h2>
+                    </div>
+                    <img class="articleimage">
                 </div>
-                <img>
-            </div>
-            <div class="article">
-                <div class="title_small">
-                    <h1>Life changes</h1>
-                    <h2>Has your life changed?</h2>
-                </div>
-                <img>
-            </div>
-            <div class="article">
-                <div class="title_small">
-                    <h1>Life changes</h1>
-                    <h2>Has your life changed?</h2>
-                </div>
-                <img>
-            </div>
-            <div class="article">
-                <div class="title_small">
-                    <h1>Life changes</h1>
-                    <h2>Has your life changed?</h2>
-                </div>
-                <img>
-            </div>
-            <div class="article">
-                <div class="title_small">
-                    <h1>Life changes</h1>
-                    <h2>Has your life changed?</h2>
-                </div>
-                <img>
-            </div>
-            <div class="article">
-                <div class="title_small">
-                    <h1>Life changes</h1>
-                    <h2>Has your life changed?</h2>
-                </div>
-                <img>
-            </div>
-            <div class="article">
-                <div class="title_small">
-                    <h1>Life changes</h1>
-                    <h2>Has your life changed?</h2>
-                </div>
-                <img>
-            </div>
+            </a>
+            </template>
             
 
         </section>
     </article>
+    <script src="javascript/articles.js"></script>
 </body>
 </html>

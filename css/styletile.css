@@ -22,6 +22,45 @@
     font-weight: 100;
   }
 
+  #topright {
+    display: flex;
+justify-content: flex-end;
+}
+/* Header and navigation*/
+nav {
+    padding: 1rem;
+    padding-right: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+nav > ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+nav > ul > li {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.menu {
+    flex: 3;
+    align-items: baseline;
+}
+
+.icons {
+    flex: 1;
+}
+
+#navlogo {
+    flex: 1;
+}
+
   /* Button styling*/
   .button {
     transition: all 3s;
@@ -153,7 +192,7 @@ h3{
   /*Styletile styling*/  
 img {
     max-width: 100%;
-    height: auto;
+    height: 100%;
   }
   
   header,

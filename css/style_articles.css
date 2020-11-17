@@ -27,11 +27,6 @@ main{
   width: 100vw;
   grid-gap:0;
 }
-nav{
-  height: 200px;
-  width: 100vw;
-  background-color: lightblue;
-}
 
 /*main article*/
 .main_article{
@@ -71,27 +66,31 @@ section.all_articles{
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     grid-gap: 1rem;
     justify-content: space-around;
-margin: 3rem 6rem;
+margin: 3rem 6rem;}
+
+section.all_articles:first-child > a > div.articlediv{
+    width: 41rem;
 }
-section.all_articles > div.article{
+section.all_articles > a > div.articlediv{
     background-color: #007777;
     width: 20rem;
     height: 20rem;
+    cursor: pointer;
 }
-section.all_articles > div.article > div.title_small{
+section.all_articles > a > div.articlediv > div.title_small{
     background-color: var(--light-gray);
     padding: .6rem;
     border-radius: 1rem 0 0 1rem;
-    width: 60%;
+    width: 70%;
     position: relative;
     top: 12rem;
-    right: -8rem;
+    right: -6rem;
 }
-section.all_articles > div.article > div.title_small >h1{
+section.all_articles > a > div.articlediv > div.title_small >h1{
     margin: 0;
     font-size: 1.4rem;
 }
-section.all_articles > div.article > div.title_small > h2{
+section.all_articles> a > div.articlediv > div.title_small > h2{
     margin: 0;
     font-size: 1rem;
 }

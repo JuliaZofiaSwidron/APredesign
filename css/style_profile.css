@@ -22,20 +22,17 @@ body{
 }
 main{
   display: flex;
-  margin: 0;
+  margin: 5rem 0;
   height: calc(100vh - 200px);
   padding: 0;
   width: 100vw;
   grid-gap:0;
 }
-nav{
-  height: 200px;
-  width: 100vw;
-  background-color: lightblue;
-}
 
 /*side navigation styling*/
-
+#burger_menu_side_navigation{
+  display: none;
+}
 #side_navigation{
   position: relative;
   top: 0;
@@ -72,7 +69,6 @@ li.active{
 ol >li> .icon, .log_out > div.icon, .messages_header > .icon, .profile_header > .icon{
   height: 30px;
   width: 30px;
-  background-color: #007777;
   align-self: center;
 }
 ol > li > h1{
@@ -225,7 +221,6 @@ p.learn_more{
   justify-content: space-between;
 }
 .insurance_icon{
-  background-color: #007777;
   height: 4rem;
   width: 4rem;
   grid-area: 1/1/2/2 ;
@@ -350,4 +345,176 @@ div.email > div.button{
 /* hiding and showing*/
 article#profile.hidden, article#messanger.hidden, article#profileplan.hidden{
   display: none;
+}
+
+@keyframes slide{
+  from { left: -10rem;}
+  to { left: 0rem;}
+}
+
+.movemenu{
+  animation: slidemenu 1s ease-in-out forwards;
+}
+.movemenuback{
+  animation: slidemenu 1s ease-in-out reverse forwards;
+}
+
+@keyframes slidemenu{
+  from {
+    left: 10px;
+  }
+  to{
+    left: 15rem;
+  }
+}
+
+/*resizing*/
+@media only screen and (max-width: 1100px) and (min-width:881px){
+  #side_navigation{
+    width: 20rem;
+    height: 100%;
+    left:0;
+    position: absolute;
+    z-index: 10;
+    top: 200px;
+  }
+
+  #burger_menu_side_navigation{
+    display: block;
+    position: absolute;
+    top: 210px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 20;
+  }
+  #burger_menu_side_navigation > div{
+  background-color: var(--darkblue-color);
+  border-radius: 10px;
+  width: 100%;
+  height: 2px;
+  margin: 7px 3px;
+  }
+  .shownavi{
+    animation: slide 1s ease-in-out forwards;
+    display: block;
+  }
+  .hidenavi{
+    animation: slide 1s ease-in-out reverse forwards;
+    display: none;
+  }
+}
+@media only screen and (min-width: 551px) and (max-width: 880px){
+  #side_navigation{
+    width: 20rem;
+    height: 100%;
+    left:0;
+    position: absolute;
+    z-index: 10;
+    top: 200px;
+  }
+
+  #burger_menu_side_navigation{
+    display: block;
+    position: absolute;
+    top: 210px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 20;
+  }
+  #burger_menu_side_navigation > div{
+  background-color: var(--darkblue-color);
+  border-radius: 10px;
+  width: 100%;
+  height: 2px;
+  margin: 7px 3px;
+  }
+  .shownavi{
+    animation: slide 1s ease-in-out forwards;
+    display: block;
+  }
+  .hidenavi{
+    animation: slide 1s ease-in-out reverse forwards;
+    display: none;
+  }
+  #profile , #messanger, #profileplan{
+    display: block;
+  }
+  #profile > div, #messanger > div, #profileplan>div, .insurance_data ul > li{
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .pension > div.payout, .figure > ul{
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 500px){
+  #burger_menu_side_navigation{
+    display: none;
+  }
+  #side_navigation{
+    display: flex;
+    position: fixed;
+    top: calc(100vh - 70px);
+    left: 0;
+    width: 100vw;
+    height: 70px;
+    z-index: 20;
+  }
+  #side_navigation >h1{
+    display: none;
+  }
+  ol.sections{
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+  }
+  ol> li.section{
+    width: 25vw;
+    display: block;
+    align-items: center;
+    margin:0;
+    padding: 5px;
+    text-align: center;
+  }
+  ol> li.section > h1{
+    font-size: 10px;
+    margin:0;
+  }
+  ol> li.section >div.icon{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .log_out{
+    display: none;
+  }
+  #profile , #messanger, #profileplan{
+    display: block;
+    width: 100%;
+  }
+  #profile > div, #messanger > div, #profileplan>div, .insurance_data ul > li{
+    width:80%;
+  }
+  .pension > div.payout, .figure > ul{
+    width: 100%;
+    margin:0;
+  }
+  div.inbox > div.button{
+  position: relative;
+  top: 1rem;
+  left: auto;
+  }
+  div.email > div.button{
+    position: relative;
+    top: 1rem;
+  left: auto;
+  }
+  div.inbox{
+    padding: 0;
+    margin: 0;
+  }
 }
