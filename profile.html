@@ -11,8 +11,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
-    <link rel='stylesheet' href="css/styletile.css">
-    <link rel='stylesheet' href="css/style_profile.css">
+    <link rel='stylesheet' href="css/styletilejulia.css">
+    <link rel='stylesheet' href="css/style_profilejulia.css">
 </head>
 
 <body>
@@ -25,11 +25,28 @@
 
         <ul class="icons">
             <li><img src="css/img/search_icon.svg"></li>
-            <li><img src="css/img/mail_icon.svg"></li>
-            <li><img src="css/img/user_icon.svg"></li>
+            <li><a href="profile.html"><img src="css/img/mail_icon.svg"></a></li>
+            <li><a href="profile.html"><img src="css/img/user_icon.svg"></a></li>
         </ul>
 
         <img id="navlogo" src="css/img/logo.svg">
+
+        <!--        trying things out-->
+        <div class="topnav">
+            <a href="#home" class="active"><img id="navlogo2" src="css/img/logo.svg"></a>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <img id="burgerlogo" src="css/img/user_icon.svg" onclick="burgerMenu()">
+             <!-- Navigation links (hidden by default) -->
+            <div class="menu2">
+            <ul>
+                <li><a href="articles.html?category=pension">Pension</a></li>
+            <li><a href="articles.html?category=members">Members</a></li>
+            <li><a  href="articles.html?category=about_ap">About AP</a></li>
+            </ul>
+                </div>
+        </div>
+        <!--        end of trying things out-->
+
     </nav>
     <main>
         <section id="burger_menu_side_navigation">
@@ -51,9 +68,9 @@
                     <div class="icon" id="profile&plan"><img class="planmenu" src="icons/profile.svg" alt="icon of a person outline"></div>
                     <h1>Profile & Plan</h1>
                 </li>
-                <li class="section">
+                <li class="section"><a href="quiz.html">
                     <div class="icon"><img src="icons/change.svg"></div>
-                    <h1>Change Plan</h1>
+                    <h1>Change Plan</h1></a>
                 </li>
             </ol>
             <div class="log_out">

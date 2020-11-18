@@ -27,40 +27,150 @@
 justify-content: flex-end;
 }
 /* Header and navigation*/
-nav {
-    padding: 1rem;
-    padding-right: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
+
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+@media only screen and (max-width: 800px) {
+
+    #navlogo,
+    #navlogo2 {
+        margin-left: 20%;
+        margin-right: 20%;
+        display: flex;
+    }
+
+    .menu,
+    .icons,
+    #navlogo,
+    .menu2 {
+        display: none;
+    }
+
+    .menu2 {
+        position:relative;
+        top: 5px;
+
+    }
+
+    .menu2 > ul {
+        display:block;
+        list-style-type: none;
+        text-align: center;
+        line-height: 1.7rem;
+    }
+
+    #burgermenu {
+        display: block;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+    }
+
+    /*    trying things out*/
+    /* Style the navigation menu */
+    .topnav {
+        overflow: hidden;
+        background-color: white;
+        position: relative;
+    }
+
+    /* Style navigation menu links */
+    #burgerlogo {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+
+    /* Style the hamburger menu */
+    #burgerlogo {
+        display: block;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+    }
+
+    /* Add a grey background color on mouse-over */
+    #burgerlogo:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    /* Style the active link (or home/logo) */
+    .active {
+        background-color: white;
+        color: white;
+    }
+
+    /*    end of trying things out*/
+
+    .container {
+        display: flex;
+        flex-flow: column;
+        padding-top: 5vh;
+    }
 }
 
-nav > ul {
-    display: flex;
-    list-style-type: none;
-    justify-content: flex-start;
-    align-items: baseline;
-}
+@media only screen and (min-width: 801px) {
 
-nav > ul > li {
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
+    .container {
+        position:relative;
+        display:grid;
+        top: 5vh;
+        width:100%;
+            height: auto;
+        margin: auto;
+        grid-template-columns: 0.5fr 1fr;
+        grid-template-rows: auto;
+ grid-template-areas:
+            "title main-image"
+            "paragraph main-image"
+            "buttons main-image";
+    }
 
-.menu {
-    flex: 3;
-    align-items: baseline;
-}
+    .menu2, #burgerlogo {
+        display:none;
+    }
 
-.icons {
-    flex: 1;
-}
+    #topright {
+        display: flex;
+        justify-content: flex-end;
+    }
 
-#navlogo {
-    flex: 1;
-}
+    nav {
+        padding: 1rem;
+        padding-right: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
 
+    nav > ul {
+        display: flex;
+        list-style-type: none;
+        justify-content: flex-start;
+        align-items: baseline;
+    }
+
+    nav > ul > li {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .menu {
+        flex: 3;
+        align-items: baseline;
+    }
+
+    .icons {
+        flex: 1;
+    }
+
+    #navlogo {
+        flex: 1;
+    }
+}
   /* Button styling*/
   .button {
     transition: all 3s;

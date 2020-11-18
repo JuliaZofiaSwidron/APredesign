@@ -52,8 +52,10 @@ ol{
   margin:0;
   padding: 0;
 }
-
-ol> li{
+ol> li > a{
+  display: flex;
+}
+ol> li {
   display: flex;
   align-items: center; 
   padding: .6rem 1rem .6rem 2.5rem;
@@ -66,17 +68,17 @@ ol > li:hover{
 li.active{
   background-color: var(--orange-color);
 }
-ol >li> .icon, .log_out > div.icon, .messages_header > .icon, .profile_header > .icon{
+ol >li> .icon, ol >li > a> .icon, .log_out > div.icon, .messages_header > .icon, .profile_header > .icon{
   height: 30px;
   width: 30px;
   align-self: center;
 }
-ol > li > h1{
+ol > li > h1 , ol > li > a > h1{
   font-family: var(--secondary-font);
   font-size: 1rem;
   margin-left: 1rem;
 }
-ol > li.active > h1{
+ol > li.active > h1 , ol > li.active > a > h1{
   color: white;
 }
 /*Log out*/
