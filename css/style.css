@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/*navigation media query*/
+
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+@media only screen and (max-width: 800px) {
+
+    #navlogo,
+    #navlogo2 {
+        margin-left: 20%;
+        margin-right: 20%;
+        display: flex;
+    }
+
+    .menu,
+    .icons,
+    #navlogo,
+    .menu2 {
+        display: none;
+    }
+
+    .menu2 {
+        position:relative;
+        top: 5px;
+
+    }
+
+    .menu2 > ul {
+        display:block;
+        list-style-type: none;
+        text-align: center;
+        line-height: 1.7rem;
+    }
+
+    #burgermenu {
+        display: block;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+    }
+
+    /*    trying things out*/
+    /* Style the navigation menu */
+    .topnav {
+        overflow: hidden;
+        background-color: white;
+        position: relative;
+    }
+
+    /* Style navigation menu links */
+    #burgerlogo {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+
+    /* Style the hamburger menu */
+    #burgerlogo {
+        display: block;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+    }
+
+    /* Add a grey background color on mouse-over */
+    #burgerlogo:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    /* Style the active link (or home/logo) */
+    .active {
+        background-color: white;
+        color: white;
+    }
+
+    /*    end of trying things out*/
+
+    .container {
+        display: flex;
+        flex-flow: column;
+        padding-top: 5vh;
+    }
+}
+
+@media only screen and (min-width: 801px) {
+
+    .container {
+        position:relative;
+        display:grid;
+        top: 5vh;
+        width:100%;
+            height: auto;
+        margin: auto;
+        grid-template-columns: 0.5fr 1fr;
+        grid-template-rows: auto;
+ grid-template-areas:
+            "title main-image"
+            "paragraph main-image"
+            "buttons main-image";
+    }
+
+    .menu2, #burgerlogo {
+        display:none;
+    }
+
+    #topright {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    nav {
+        padding: 1rem;
+        padding-right: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    nav > ul {
+        display: flex;
+        list-style-type: none;
+        justify-content: flex-start;
+        align-items: baseline;
+    }
+
+    nav > ul > li {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .menu {
+        flex: 3;
+        align-items: baseline;
+    }
+
+    .icons {
+        flex: 1;
+    }
+
+    #navlogo {
+        flex: 1;
+    }
+}
+
+/*Navigation and Header*/
+
+/*CSS from Julia*/
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: white;
+    --orange-color: #FF9631;
+    --darkblue-color: #40607E;
+    --light-gray: #C7D1D9;
+    --dark-text: black;
+
+    --primary-font: 'Aleo', serif;
+    --secondary-font: 'Open Sans', sans-serif;
+    --main-text-color: #40607E;
+    --details-color: #007777;
+
+    --white-space: 1rem;
+}
+
+html {
+    font-size: 100%;
+    font-family: var(--primary-font);
+    font-weight: 100;
+}
+
+/* Button styling*/
+button {
+    transition: all 3s;
+    padding: 1rem 3rem;
+    border-radius: 5rem;
+    background: var(--darkblue-color);
+    text-align: center;
+    text-decoration: none;
+    font: 100 1.25em/1 var(--primary-font);
+    letter-spacing: 1px;
+    color: white;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    margin: 0 1rem 1rem 0;
+    border: none;
+}
+
+.secondary-button {
+    background: var(--light-gray);
+    color: var(--darkblue-color);
+    font-family: var(--secondary-font);
+    border-radius: 1rem;
+}
+
+.third-button {
+    background: var(--light-gray);
+}
+
+button:hover {
+    background-color: var(--orange-color);
+}
+
+button:active {
+    background-color: var(--darkblue-color);
+}
+
+.secondary-button:visited {
+    background-color: var(--orange-color);
+    color: var(--light-gray)
+}
+
+.secondary-button:hover {
+    background-color: var(--darkblue-color);
+    color: var(--bg-color)
+}
+
+
+/*Links styling*/
+a {
+    transition: all 0.2s;
+    font-weight: 100;
+    text-decoration: underline;
+    font-family: var(--primary-font);
+    color: var(--darkblue-color);
+}
+
+a:hover {
+    color: var(--orange-color);
+    font-weight: 100;
+}
+
+ul > li > a {
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+ul > li > a:hover {
+    font-size: 1.4rem;
+    transition: 0.3s;
+}
+
+/*Color swatches*/
+.swatches li {
+    margin-right: 5vw;
+    height: 15vw;
+    width: 20%;
+    list-style: none;
+}
+
+ul li:last-child {
+    margin-right: 0;
+}
+
+.color-swatch-1 {
+    background-color: var(--light-gray);
+}
+
+.color-swatch-2 {
+    background-color: var(--orange-color);
+}
+
+.color-swatch-3 {
+    background-color: var(--darkblue-color);
+}
+
+.color-swatch-4 {
+    background-color: var(--dark-text);
+}
+
+.color-swatch-5 {
+    background-color: var(--color-5);
+}
+
+.typography-main {
+    color: var(--details-color);
+}
+
+/*Tekst styling*/
+h1 {
+    font-size: 2rem;
+    font-weight: 100;
+    color: var(--darkblue-color);
+}
+
+h2 {
+    font-family: var(--secondary-font);
+    font-size: 1.2rem;
+    color: var(--darkblue-color);
+    font-weight: 100;
+}
+
+h4 {
+    color: var(--orange-color);
+    font-size: 3em;
+    font-weight: 400;
+    margin: 10px
+}
+
+
+h5 {
+    color: var(--dark-text);
+    font-weight: 400;
+    font-size: 3rem;
+    margin: 10px;
+}
+
+
+nav > a {
+    font-family: var(--secondary-font);
+    line-height: 1;
+    font-size: 1rem;
+    color: var(--darkblue-color);
+}
+
+.plan > ul {
+    font-family: var(--primary-font);
+    line-height: 2;
+    font-size: 1rem;
+    color: var(--darkblue-color);
+}
+
+strong {
+    font-weight: 600;
+
+}
+
+em {
+    font-style: italic;
+}
+
+
+/*Styletile styling*/
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header,
+main,
+footer {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: calc(2 * var(--white-space));
+}
+
+.full-width {
+    background: var(--darkblue-color);
+    color: var(--bg-color);
+    width: 100%;
+}
+
+.header-wrapper h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    padding-right: 0.75em;
+    font-weight: bold;
+    color: var(--bg-color);
+}
+
+.header-wrapper h2 {
+    font-size: 1.6em;
+    color: var(--bg-color);
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: var(--white-space) 0;
+    color: var(--bg-color);
+}
+
+main {
+    padding: calc(2 * var(--white-space));
+}
+
+section {
+    margin-bottom: calc(4 * var(--white-space));
+}
+
+.section-heading {
+    font-size: 1.3rem;
+    color: var(--light-gray);
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+p[class*="font-details-"] {
+    margin-top: 0.5rem;
+    margin-bottom: calc(2 * var(--white-space));
+    font-size: 0.75rem;
+    font-family: var(--secondary-font);
+    color: #6f6f6f;
+}
+
+.adjectives ul {
+    font-size: 1.5rem;
+    opacity: 0.5;
+}
+
+.adjectives ul {
+    flex-direction: column;
+}
+
+footer {
+    font-style: italic;
+    color: var(--bg-color)
+}
+
+.welcome-text {
+    padding-left: 4rem;
+    grid-area: title;
+}
+
+.welcome-p {
+    grid-area: paragraph;
+
+    padding-left: 4rem;
+}
+
+.welcome-buttons {
+    padding-left: 4rem;
+    grid-area: buttons;
+}
+
+.main-image {
+    grid-area: main-image;
+}
+
+.login-box {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--darkblue-color);
+}
+
+.login-box h1 {
+    float: left;
+    font-size: 40px;
+    margin-bottom: 50px;
+    padding: 13px 0;
+}
+
+.login-box h6 {
+    float: left;
+    margin-bottom: 1rem;
+    margin-top: 1.2rem;
+    font: 100 1.1em/1 var(--primary-font);
+    padding: 0.2rem;
+    text-decoration-line: underline;
+}
+
+.textbox {
+    width: 100%;
+    overflow: hidden;
+    font-size: 25px;
+    padding: 10px 0;
+    margin: 10px 0;
+    background-color: var(--light-gray);
+    border-radius: 10px;
+
+}
+
+.textbox i {
+    width: 46px;
+    float: left;
+    text-align: center;
+    color: var(--dark-blue);
+
+}
+
+.textbox input {
+    border: none;
+    outline: none;
+    background: none;
+    color: var(--darkblue-color);
+    font-size: 1.6rem;
+    width: 80%;
+    float: left;
+    margin: 0 10px;
+    font: 100 0.8em/1 var(--secondary-font);
+
+}
+
+.btn {
+    width: 55%;
+    background-color: var(--darkblue-color);
+    border: 0;
+    border-radius: 25px;
+    color: white;
+    padding: 1rem 0rem;
+    cursor: pointer;
+    margin: 0 1rem 1rem 0;
+    font: 100 1.5em/1 var(--primary-font);
+    float: right;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--orange-color);
+}
+
+@media (min-width: 800px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 4rem;
+    }
+
+    .swatches li {
+        margin-right: 3%;
+        height: 10vw;
+        width: 20%;
+    }
+
+    .textures li {
+        height: 15vw;
+    }
+}
+
+}
+
+@media (min-width: 900px) {
+    .adjectives ul {
+        flex-direction: row;
+    }
+}
