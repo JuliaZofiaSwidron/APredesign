@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akademikerne Pension</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <nav>
+        <ul class="menu">
+            <li><a href="articles.html?category=pension">Pension</a></li>
+            <li><a href="articles.html?category=members">Members</a></li>
+            <li><a  href="articles.html?category=about_ap">About AP</a></li>
+        </ul>
+
+        <ul class="icons">
+            <li><img src="css/img/search_icon.svg"></li>
+            <li><a href="profile.html"><img src="css/img/mail_icon.svg"></a></li>
+            <li><a href="profile.html"><img src="css/img/user_icon.svg"></a></li>
+        </ul>
+
+        <img id="navlogo" src="css/img/logo.svg">
+
+        <!--        trying things out-->
+        <div class="topnav">
+            <a href="#home" class="active"><img id="navlogo2" src="css/img/logo.svg"></a>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <img id="burgerlogo" src="css/img/user_icon.svg" onclick="burgerMenu()">
+             <!-- Navigation links (hidden by default) -->
+            <div class="menu2">
+            <ul>
+                <li><a href="articles.html?category=pension">Pension</a></li>
+            <li><a href="articles.html?category=members">Members</a></li>
+            <li><a  href="articles.html?category=about_ap">About AP</a></li>
+            </ul>
+                </div>
+        </div>
+        <!--        end of trying things out-->
+
+    </nav>
+
+    <div class="login-box">
+        <h1>Welcome back</h1>
+        <div class="textbox">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Username">
+        </div>
+        <div class="textbox">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password">
+        </div>
+        <h6><a href="">I forgot my password</a></h6>
+        <a href="quiz.html"><input type="button" class="btn" value="Login"></a>
+    </div>
+    <script src="js/script.js"></script>
+
+</body></html>
